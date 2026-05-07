@@ -1,0 +1,15 @@
+<svg 
+  width="100%" 
+  height="100%" 
+  viewBox="8 8 80 80" 
+  preserveAspectRatio="xMidYMid meet"
+  fill="none" 
+  xmlns="http://www.w3.org/2000/svg">
+
+  <rect x="8" y="8" width="80" height="80" rx="22" fill="#111111"/>
+
+  <circle cx="48" cy="38" r="10" fill="#50A2FF"/>
+  <rect x="28" y="54" width="40" height="14" rx="7" fill="#009B68"/>
+
+</svg>
+
