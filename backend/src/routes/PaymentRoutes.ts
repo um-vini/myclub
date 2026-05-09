@@ -31,7 +31,7 @@ router.patch('/restore/:id', checkAdmin, PaymentController.restore);
 router.patch('/cancel/:id', PaymentController.cancel);
 
 // Update existing payment details
-router.put('/:id', validatePayment, PaymentController.update);
+router.put('/:id', checkAdmin, validatePayment, PaymentController.update);
 
 // Logical deletion (Soft Delete) - restricted to administrators
 router.delete('/:id', checkAdmin, PaymentController.delete);

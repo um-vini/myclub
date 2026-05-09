@@ -18,17 +18,17 @@ router.use(checkToken);
 router.get('/', MemberController.getAll);
 
 // Register a new member with data validation
-router.post('/register', validateMember, MemberController.register);
+router.post('/register', checkAdmin, validateMember, MemberController.register);
 
 // Status management (Activation/Inactivation)
-router.patch('/inactivate/:id', MemberController.inactivate);
-router.patch('/reactivate/:id', MemberController.reactivate);
+router.patch('/inactivate/:id', checkAdmin, MemberController.inactivate);
+router.patch('/reactivate/:id', checkAdmin, MemberController.reactivate);
 
 // Restore a soft-deleted member - restricted to administrators
 router.patch('/restore/:id', checkAdmin, MemberController.restore);
 
 // Update existing member details
-router.put('/:id', validateMember, MemberController.update);
+router.put('/:id', checkAdmin, validateMember, MemberController.update);
 
 // Retrieve specific member by ID
 router.get('/:id', MemberController.getById);

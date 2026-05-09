@@ -19,7 +19,8 @@ A utilização do **TypeScript** permitiu a detecção de erros ainda em tempo d
 - **TypeScript** para tipagem estática e prevenção de erros
 - **Sequelize ORM** (Modelagem e abstração de banco de dados relacional)
 - **MySQL** (Persistência de dados segura)
-- **JWT** para autenticação e autorização
+- **JWT & Bcrypt** para autenticação, autorização e criptografia de senhas
+- **ZOD** para validação de dados
 
 #### **Detalhes Técnicos Frontend**
 

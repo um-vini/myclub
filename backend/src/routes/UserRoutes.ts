@@ -21,7 +21,7 @@ router.get('/checkuser', UserController.checkUser); // Validates existing sessio
  * Note: The controller handles the logic where the first user becomes Admin.
  * Subsequent registrations require an Admin token if the system is already initialized.
  */
-router.post('/register', validateUser, UserController.register);
+router.post('/register', checkAdmin, validateUser, UserController.register);
 
 /**
  * Protected routes

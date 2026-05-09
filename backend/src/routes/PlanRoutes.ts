@@ -28,7 +28,7 @@ router.patch('/reactivate/:id', checkAdmin, PlanController.reactivate);
 router.patch('/restore/:id', checkAdmin, PlanController.restore);
 
 // Update existing plan details - restricted to administrators
-router.put('/:id', checkAdmin, validatePlan, PlanController.update);
+router.put('/:id', validatePlan, PlanController.update);
 
 // Retrieve specific plan by ID
 router.get('/:id', PlanController.getById);
